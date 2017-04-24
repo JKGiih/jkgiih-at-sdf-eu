@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteRule ^index\.html$ cgi-bin\/gopher-to-http.cgi [L]
+RewriteRule ^$ cgi-bin\/gopher-to-http.cgi  [L]
+ErrorDocument 404 /404.html
