@@ -1,8 +1,7 @@
 #!/bin/ksh
 
-root="/udd/j/jkgiih/gopher";
 if [ -z $1 ]; then
-    dir="$root/$QUERY_STRING";
+    dir="$QUERY_STRING";
 else
     dir="$1";
 fi
@@ -24,7 +23,7 @@ else
             else
                 ext="${f##*.}";
                 if [ "$ext" = "txt" ]; then # text file
-                    echo "<p><a href=\"/cgi-bin/process-viewable-file.cgi?$QUERY_STRING/$f\">$f</a></p>";
+                    echo "<p><a href=\"/cgi-bin/process-viewable-file.cgi?$dir/$f\">$f</a></p>";
                 elif [[ "$ext" = "gif" || "$ext" = "jpg" || "$ext" = "jpeg" || "$ext" = "png" || "$ext" = "bmp" ]]; then # image file
                     echo "<p><img src=\"/cgi-bin/process-viewable-file.cgi?$dir/$f\" alt=\"$f\"></img></p>";
                 elif [[ "$ext" = "ogg" || "$ext" = "wav" || "$ext" = "mp3" ]]; then # sound file

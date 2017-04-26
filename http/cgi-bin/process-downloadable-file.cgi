@@ -1,8 +1,7 @@
 #!/bin/ksh
 
-root="/udd/j/jkgiih/gopher";
 if [ -z $1 ]; then
-    dir="$root/$QUERY_STRING";
+    dir="$QUERY_STRING";
 else
     dir="$1";
 fi

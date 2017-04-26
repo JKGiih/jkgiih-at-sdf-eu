@@ -1,6 +1,5 @@
 #!/bin/ksh
 
-root="/udd/j/jkgiih/gopher";
 dir=$1;
 line=$2;
 
