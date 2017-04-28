@@ -66,7 +66,7 @@ else
 	fi
     elif [ "$type" = "h" ]; then # html file                                                   
         if [ -z $domain ]; then
-            echo "<p><a href=\"/cgi-bin/process-html.cgi?$dir/$path\">$label</a></p>";
+            echo "<p><a href=\"/cgi-bin/process-html-file.cgi?$dir/$path\">$label</a></p>";
         else
             if [ -z $port ]; then # external                                                   
                 echo "<p><a href=\"$domain/$path\">$label</a></p>";

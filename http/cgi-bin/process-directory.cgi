@@ -28,6 +28,8 @@ else
                     echo "<p><img src=\"/cgi-bin/process-viewable-file.cgi?$dir/$f\" alt=\"$f\"></img></p>";
                 elif [[ "$ext" = "ogg" || "$ext" = "wav" || "$ext" = "mp3" ]]; then # sound file
                     echo "<p><audio controls><source src=\"./process-viewable-file.cgi?$dir/$f\" type=\"audio/$ext\"><a hred=\"/cgi-bin/process-downloadable-file.cgi?$dir/$f\">$f</a></audio></p>";
+                elif [[ "$ext" = "html" || "$ext" = "htm" ]; then # html file
+                    echo "<p><a href=\"/cgi-bin/process-html-file.cgi?$dir/$f\">$f</a></p>";
                 else # binary/other file
                     echo "<p><a href=\"/cgi-bin/process-downloadable-file.cgi?$dir/$f\">$f</a></p>";
                 fi
